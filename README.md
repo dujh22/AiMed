@@ -23,7 +23,9 @@
 
 ## 😜 推理和部署
 
-推理所需的模型权重、配置目前公开于https://huggingface.co/DuJinHua/AiMed。下面示范多种推理方式。
+推理所需的模型权重、配置目前公开于https://huggingface.co/DuJinHua/AiMed
+
+下面示范多种推理方式。
 
 推理前请安装依赖：
 ```shell
