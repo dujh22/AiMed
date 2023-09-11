@@ -7,29 +7,6 @@
 
 **AiMed** 期望实现有效处理医学知识问答、医学论文阅读、医学文献检索等任务和在医学科研中的应用。
 
-## 📆 工作流
-
-[2023/09/01] 清华大学完成第一阶段PT代码开发和模型训练，并接入相关测试，开始进行第一阶段实际运行
-
-[2023/09/01] 医信所发布论文全文数据集1-预计20万篇
-
-[2023/08/30] 医信所发布医学名词解释问答数据集和医学论文摘要问答数据集
-
-[2023/08/29] 清华大学发布《医疗文献LLM训练方案》
-
-[2023/08/29] 医信所发布医学数据数据集-共计108本，612个文件
-
-[2023/08/28] 清华大学发布《关于基座模型选择的相关问题说明》和《关于大模型训练的成本核算》
-
-[2023/08/23] 医信所发布论文摘要数据集2-共计312万篇
-
-[2023/08/22] 清华大学与医信所联合发布《中文医学大语言模型合作方案》
-
-[2023/08/21] 医信所发布论文摘要数据集1-共计276万篇
-
-[2023/08/16] 针对中文医学领域构造大语言模型的初步设想与讨论
-
-
 ## ⏩ 构建流程
 
 **AiMed** 整个构建流程包括：
@@ -38,37 +15,11 @@
 - RLHF(奖励建模、强化学习训练)
 - DPO(直接偏好优化)
 
-具体，AiMed参照ChatGPT等大语言模型的一般构造思路，实现了医学领域大模型的训练：
-
-
-- 第一阶段：PT(Continue PreTraining)增量预训练
-  - 在海量领域文档数据上二次预训练通用基座大语言模型，以注入领域知识
-- 第二阶段：SFT(Supervised Fine-tuning)有监督微调
-  - 构造指令微调数据集
-  - 在预训练模型基础上做指令精调，以对齐指令意图
-- 第三阶段 
-  - RLHF(Reinforcement Learning from Human Feedback)基于人类反馈对语言模型进行强化学习，分两步：
-    - RM(Reward Model)奖励模型建模
-      - 构造人类偏好排序数据集
-      - 训练奖励模型，用来建模人类偏好
-        - 主要是"HHH"原则，具体是"helpful, honest, harmless"
-    - RL(Reinforcement Learning)强化学习
-      - 用奖励模型来训练SFT模型
-      - 生成模型使用奖励或惩罚来更新其策略
-      - 以便生成更高质量、更符合人类偏好的文本
-- 第四阶段
-  - DPO(Direct Preference Optimization) 直接偏好优化方法
-    - DPO通过直接优化语言模型来实现对其行为的精确控制
-    - 无需使用复杂的强化学习，也可以有效学习到人类偏好
-    - DPO相较于RLHF更容易实现且易于训练，效果更好
-
 ## 🌏 模型基座
 
 | 模型名                                                   | 模型大小                     | 开源参数                                                                                    |
-| ------------------------------------------------------- | --------------------------- |-----------------------------------------------------------------------------------------|
-| [LLaMA-2](https://huggingface.co/meta-llama)            | 7B/13B/70B                  | [ziqingyang/chinese-alpaca-2-7b](https://huggingface.co/ziqingyang/chinese-alpaca-2-7b)                                                                                        |
-| [Baichuan](https://github.com/baichuan-inc/baichuan-13B) | 7B/13B                      | [baichuan-inc/Baichuan-13B-Chat](https://huggingface.co/baichuan-inc/Baichuan-13B-Chat) |
-| [ChatGLM2](https://github.com/THUDM/ChatGLM2-6B)        | 6B                          | [THUDM/chatglm2-6b](https://huggingface.co/THUDM/chatglm2-6b)                           |
+| ------------------------------------------------------- | --------------------------- |-----------------------------------------------------------------------------------------|                                                                                        |
+| [Baichuan](https://github.com/baichuan-inc/baichuan-13B) | 13B                      | [baichuan-inc/Baichuan-13B-Chat](https://huggingface.co/baichuan-inc/Baichuan-13B-Chat) |
 
 ## 😜 推理和部署
 
