@@ -3,7 +3,7 @@
 [![python_version](https://img.shields.io/badge/Python-3.8%2B-green.svg)](requirements.txt)
 ## 🔬 介绍
 
-**AiMed** 面向中文医学的人工智能大语言模型由**清华大学OpenDE团队**和**中国医学科学院医学信息研究所**（下称“医信所”）联合发布。 
+**AiMed** 面向中文医学的人工智能大语言模型由**清华大学OpenDE团队**和**中国医学科学院医学信息研究所**联合研发。 
 
 **AiMed** 期望实现有效处理医学知识问答、医学论文阅读、医学文献检索等任务和在医学科研中的应用。
 
@@ -23,7 +23,12 @@
 
 ## 😜 推理和部署
 
-推理所需的模型权重、配置目前公开于https://huggingface.co/DuJinHua/AiMed
+推理所需的模型权重、配置目前公开于
+
+| 模型名                                                   | 模型用途                     | 开源参数                                              |
+| ------------------------------------------------------- | --------------------------- |----------------------------------------------------------------------------|          
+| AiMed | 基础医学百科大模型                      |[ https://huggingface.co/DuJinHua/AiMed](https://huggingface.co/DuJinHua/AiMed)|
+| AiMed_Paper | 医学文献摘要生成大模型                      | [https://huggingface.co/DuJinHua/AiMed](https://huggingface.co/DuJinHua/AiMed_PaperAbs)|
 
 下面示范多种推理方式。
 
@@ -82,4 +87,4 @@ CUDA_VISIBLE_DEVICES=0 python gradio_demo.py --model_type baichuan --base_model 
 
 ## ⚠️ 局限性
 
-授权协议为 [The Apache License 2.0](/LICENSE)，可免费用做商业用途。
+授权协议为 [The Apache License 2.0](/LICENSE)，目前仅支持学术研究，不支持商业用途。
