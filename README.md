@@ -28,7 +28,7 @@
 | 模型名                                                   | 模型用途                     | 开源参数                                              |
 | ------------------------------------------------------- | --------------------------- |----------------------------------------------------------------------------|          
 | AiMed | 基础医学百科大模型                      |[ https://huggingface.co/DuJinHua/AiMed](https://huggingface.co/DuJinHua/AiMed)|
-| AiMed_Paper | 医学文献摘要生成大模型                      |[ [https://huggingface.co/DuJinHua/AiMed_PaperAbs](https://huggingface.co/DuJinHua/AiMed_PaperAbs)](https://huggingface.co/DuJinHua/AiMed_PaperAbs)|
+| AiMed_Paper | 医学文献摘要生成大模型                      |[https://huggingface.co/DuJinHua/AiMed_PaperAbs](https://huggingface.co/DuJinHua/AiMed_PaperAbs)|
 
 下面示范多种推理方式。
 
