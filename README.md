@@ -88,3 +88,16 @@ CUDA_VISIBLE_DEVICES=0 python gradio_demo.py --model_type baichuan --base_model 
 ## ⚠️ 局限性
 
 授权协议为 [The Apache License 2.0](/LICENSE)，目前仅支持学术研究，不支持商业用途。
+
+## Citation
+
+```
+@misc{du24aimed,
+   author = {Jinhua Du, Zexun Jiang, Xinyi Li, Tianying Tang, Xiaoying Li, Yuyang Liu, Yan Luo , Hui Liu},
+   title = {AiMed: Artificial Intelligence large language model for Medicine in Chinese},
+   year={2024},
+   publisher = {GitHub},
+   journal = {GitHub repository},
+   howpublished = {\url{https://github.com/dujh22/AiMed}}
+}
+```
