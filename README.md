@@ -1,6 +1,7 @@
 # AiMed: Artificial Intelligence large language model for chinese Medicine  面向中文医学的人工智能大语言模型
 [![License Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 [![python_version](https://img.shields.io/badge/Python-3.8%2B-green.svg)](requirements.txt)
+ 
 ## 🔬 介绍
 
 **AiMed** 面向中文医学的人工智能大语言模型由**清华大学OpenDE团队**和**中国医学科学院医学信息研究所**联合研发。 
@@ -83,6 +84,10 @@ CUDA_VISIBLE_DEVICES=0 python gradio_demo.py --model_type baichuan --base_model 
 - `--only_cpu`: 仅使用CPU进行推理
 - `--gpus {gpu_ids}`: 指定使用的GPU设备编号，默认为0。如使用多张GPU，以逗号分隔，如0,1,2
 - `--resize_emb`：是否调整embedding大小，若不调整，则使用预训练模型的embedding大小，默认不调整
+
+## 📃 技术论文
+
+[AiMed: Artificial intelligent large language model for Medicine in China](https://ieeexplore.ieee.org/abstract/document/10803480)
 
 
 ## ⚠️ 局限性
