@@ -100,4 +100,13 @@ CUDA_VISIBLE_DEVICES=0 python gradio_demo.py --model_type baichuan --base_model 
    journal = {GitHub repository},
    howpublished = {\url{https://github.com/dujh22/AiMed}}
 }
+
+@inproceedings{du2024aimed,
+  title={AiMed: Artificial intelligent large language model for Medicine in China},
+  author={Du, Jinhua and Li, Xiaoying and Jiang, Zexun and Liu, Yuyang and Yin, Hao and Liu, Hui},
+  booktitle={2024 IEEE International Conference on Medical Artificial Intelligence (MedAI)},
+  pages={360--365},
+  year={2024},
+  organization={IEEE}
+}
 ```
